@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aman | Portfolio</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e2e8f0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cbd5f5;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  background: linear-gradient(90deg,#38bdf8,#6366f1);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Typing Effect (CSS ONLY) */
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #facc15;
+  width: 0;
+  animation: typing 4s steps(20) infinite, blink 0.7s infinite;
+  color: #facc15;
+  font-weight: bold;
+}
+
+@keyframes typing {
+  0% { width: 0 }
+  50% { width: 220px }
+  100% { width: 0 }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(45deg,#6366f1,#38bdf8);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #38bdf8;
+}
+
+.hero img {
+  width: 250px;
+  border-radius: 50%;
+  border: 4px solid #38bdf8;
+  box-shadow: 0 0 30px #38bdf8;
+}
+
+/* Sections */
+section {
+  padding: 80px 8%;
+}
+
+h2 {
+  margin-bottom: 25px;
+  color: #38bdf8;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  padding: 12px 18px;
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 6px;
+}
+
+.skill:hover {
+  background: #6366f1;
+  transform: scale(1.1);
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.projects a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px #6366f1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="logo">AMAN</div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="query .html">Query</a>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hi, I'm Aman 👋</h1>
+    <p>I am a <span class="typing">Frontend Developer</span></p>
+
+    <a href="query.html">
+      <button class="btn">Hire Me</button>
+    </a>
+  </div>
+
+  <img src="my image.jpeg" alt="Aman">
+</section>
+
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am Aman, pursuing B.Tech in Computer Science from St. Andrews Institute of Technology and Management, Gurugram.
+    I love building modern UI and learning new technologies.
+  </p>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">C Language</div>
+    <div class="skill">Prompt Engineering</div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects">
+
+    <a href="https://amanshakya-codehub.github.io/shopping/" target="_blank">
+      <div class="card">
+        <h3>E-commerce Clone</h3>
+        <p>Responsive e-commerce UI</p>
+      </div>
+    </a>
+
+    <a href="https://amanshakya-codehub.github.io/newschannel/" target="_blank">
+      <div class="card">
+        <h3>News Website</h3>
+        <p>Modern news UI design</p>
+      </div>
+    </a>
+
+    <a href="query .html">
+      <div class="card">
+        <h3>Query Form</h3>
+        <p>Submit queries</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Aman | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

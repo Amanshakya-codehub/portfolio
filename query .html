@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Query Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(#0f172a, rgb(96, 197, 255));
+      height: 100vh;
+    }
+
+    /* Navbar Button */
+    .nav {
+      display: inline-block;
+      background: #6366f1;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 20px;
+      transition: 0.3s;
+    }
+
+    .nav:hover {
+      background: #4f46e5;
+      transform: scale(1.05);
+    }
+
+    /* Center Container */
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 80px);
+    }
+
+    /* Form */
+    form {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      width: 350px;
+      text-align: center;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    form h1 {
+      margin-bottom: 25px;
+      color: #222;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin: 10px 0 5px 0;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+    }
+
+    /* Submit Button */
+    #submit {
+      background: rgb(0, 162, 255);
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: 600;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #submit:hover {
+      background: #0284c7;
+      transform: translateY(-2px);
+    }
+
+    /* Links */
+    .extra-links {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .extra-links a {
+      color: red;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .extra-links a:hover {
+      color: #0ea5e9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Fixed Navbar Link -->
+  <a href="index.html" class="nav">Dashboard</a>
+
+  <!-- Form -->
+  <div class="container">
+    <form>
+      <h1>Query</h1>
+
+      <label>Name</label>
+      <input type="text" placeholder="Enter your Name" required />
+
+      <label>Phone No.</label>
+      <input type="tel" placeholder="Your Contact No." required />
+
+      <label>Query</label>
+      <input type="text" placeholder="Write your query here..." required />
+
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+  </div>
+
+</body>
+</html>
