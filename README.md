@@ -40,7 +40,7 @@ Download or clone the project and open `index.html` in your browser.
 
 ## Live Demo
 
-https://your-username.github.io/repository-name/
+https://amanshakya-codehub.github.io/portfolio/
 
 ---
 
